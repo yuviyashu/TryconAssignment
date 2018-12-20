@@ -24,7 +24,7 @@ public class Main implements Runnable {
 		for(int i=0;i<10;i++) {
 			sngLst.add(new Song("Song "+i));
 		}
-		
+		playdLst.add(i);
 		/*
 		 * Creating the main class object thread object 
 		 */
