@@ -34,15 +34,16 @@ public class Main implements Runnable {
 		/*
 		 * Asking input repeatedly
 		 */
+		Scanner scan =  new Scanner(System.in);
 		while(true) {
 			System.out.println("Please provide any option below\n");
 			System.out.println("Press 1 to play in random order\n");
 			System.out.println("Press 2 to play next\n");
 			System.out.println("Press 3 to play previous\n");
 			System.out.println("Press 4 to exit\n");
-			Scanner scan =  new Scanner(System.in);
+			
 			int inp = scan.nextInt();
-			scan.close();
+			
 			
 			switch(inp) {
 				case 1: playRandomSong();
@@ -51,7 +52,9 @@ public class Main implements Runnable {
 						break;
 				case 3: playPrevSong();
 						break;
-				case 4: System.exit(1);
+				case 4: scan.close();
+						System.out.println("Exited Successfully..\n");
+						System.exit(1);
 				default:System.err.println("Improper Input");
 			}
 		}
